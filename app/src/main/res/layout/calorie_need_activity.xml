@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/CalorieNeedLayout"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tekstview12345"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="500dp"
+        android:gravity="center"
+        android:text="Calculate your calorie requirement"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        />
+    <ImageView
+        android:id="@+id/questionNeed"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="230dp"
+        android:gravity="center"
+        android:src="@drawable/question_mark"
+        app:layout_constraintTop_toBottomOf="@+id/tekstview12345"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <CheckBox
+        android:id="@+id/base_calorie_need"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginRight="160dp"
+        android:text="Basic Metabolism"
+        android:textColor="@color/black"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/questionNeed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <CheckBox
+        android:id="@+id/calorie_need_with_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="160dp"
+        android:textColor="@color/black"
+        android:text="Calorie Requirement"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/questionNeed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <Spinner
+        android:id="@+id/sprtsman_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/calorie_need_with_activity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <EditText
+        android:id="@+id/body_fat_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Body Fat [%]"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:backgroundTint="@android:color/black"
+        android:colorControlNormal="@color/black"
+        android:colorControlActivated="@color/black"
+        android:colorControlHighlight="@color/ap_gray"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sprtsman_normal" />
+
+
+
+    <Spinner
+        android:id="@+id/gender123"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/body_fat_percentage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <ImageView
+        android:id="@+id/BF_tip"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:src="@drawable/question_mark"
+        app:layout_constraintTop_toBottomOf="@+id/sprtsman_normal"
+        app:layout_constraintLeft_toRightOf="@+id/body_fat_percentage"
+        app:layout_constraintBottom_toTopOf="@+id/gender123"
+        />
+
+    <EditText
+        android:id="@+id/Age_calorie_need"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Age"
+        android:gravity="center"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:backgroundTint="@android:color/black"
+        android:colorControlNormal="@color/black"
+        android:colorControlActivated="@color/black"
+        android:colorControlHighlight="@color/ap_gray"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gender123" />
+    <EditText
+        android:id="@+id/weight_calorie_need"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Weight"
+        android:gravity="center"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:backgroundTint="@android:color/black"
+        android:colorControlNormal="@color/black"
+        android:colorControlActivated="@color/black"
+        android:colorControlHighlight="@color/ap_gray"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Age_calorie_need" />
+
+    <Spinner
+        android:id="@+id/weightUnits12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/weight_calorie_need"
+        app:layout_constraintLeft_toRightOf="@id/weight_calorie_need"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/weight_calorie_need" />
+
+    <EditText
+        android:id="@+id/height_calorie_need"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:hint="Height"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textColorHint="@color/black"
+        android:backgroundTint="@android:color/black"
+        android:colorControlNormal="@color/black"
+        android:colorControlActivated="@color/black"
+        android:colorControlHighlight="@color/ap_gray"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weight_calorie_need" />
+
+
+    <Spinner
+        android:id="@+id/heightunits12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/height_calorie_need"
+        app:layout_constraintLeft_toRightOf="@id/height_calorie_need"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/height_calorie_need" />
+
+    <Spinner
+        android:id="@+id/activity_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/height_calorie_need" />
+
+
+
+    <Button
+        android:id="@+id/Calculate123"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="Calcualte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_amount"
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold|italic"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:id="@+id/Calorie_Requiremnts"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Calculate123"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".InstructionActivity">
+    <ImageView
+        android:id="@+id/iconka1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/gymicon"
+        app:layout_constraintBottom_toTopOf="@id/tekstInstruction1"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        />
+    <TextView
+        android:id="@+id/tekstInstruction1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INSTRUCTION"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/ap_gray"
+        app:layout_constraintTop_toBottomOf="@id/iconka1"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        />
+    <HorizontalScrollView
+        android:id="@+id/scrollview11"
+        android:layout_width="wrap_content"
+        android:layout_height="530dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tekstInstruction1"
+
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#1F000000"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+
+            />
+    </HorizontalScrollView>
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView_loading1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/giff"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        />
+    <Button
+        android:id="@+id/buttonGO1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollview11"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

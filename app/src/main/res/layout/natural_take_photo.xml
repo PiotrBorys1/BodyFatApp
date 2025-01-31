@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ap_white"
+    android:id="@+id/naturaltakephotolayout"
+    tools:context=".StartActivity">
+
+    <TextView
+        android:id="@+id/tekstview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="500dp"
+        android:gravity="center"
+        android:text="Choose your gender, insert height and weight"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30dp"
+
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        />
+
+    <Spinner
+        android:id="@+id/gender_list1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tekstview1" />
+
+    <EditText
+        android:id="@+id/height1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Height"
+        android:inputType="number"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:backgroundTint="@android:color/black"
+        android:colorControlNormal="@color/black"
+        android:colorControlActivated="@color/black"
+        android:colorControlHighlight="@color/ap_gray"
+        android:textSize="30dp"
+       android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/gender_list1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/height_unit1"
+         />
+
+
+    <EditText
+        android:id="@+id/weight1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Weight"
+        android:inputType="number"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:backgroundTint="@android:color/black"
+        android:colorControlNormal="@color/black"
+        android:colorControlActivated="@color/black"
+        android:colorControlHighlight="@color/ap_gray"
+        android:textSize="30dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/weight_unit1"
+        app:layout_constraintTop_toBottomOf="@id/height1" />
+
+
+    <Spinner
+        android:id="@+id/height_unit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/height1"
+        app:layout_constraintLeft_toRightOf="@id/height1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/height1" />
+
+
+    <Spinner
+        android:id="@+id/weight_unit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/weight1"
+        app:layout_constraintLeft_toRightOf="@id/weight1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/weight1" />
+
+
+    <Button
+        android:id="@+id/choose_picture1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="Choose photo from gallery"
+        android:textSize="15sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight1"
+
+
+        />
+
+    <TextView
+        android:id="@+id/tekstviewphoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_picture1"
+
+
+        />
+    <Button
+        android:id="@+id/OK1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="OK"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tekstviewphoto"
+
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
